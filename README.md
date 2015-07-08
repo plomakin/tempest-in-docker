@@ -33,6 +33,14 @@ Build your container with your own image name
 docker build -t <username>/tempest-in-docker .
 ```
 
-### Run tempest test suite
+### Run tempest test suite inside docker container
 
-Same as section above but with your own image name
+To use your container with pre-installed tempest in it use command to connect:
+
+```
+docker run -i -t <username>/tempest-in-docker /bin/bash
+cd /tempest
+./run_tempest -s
+# OR
+tox -esmoke
+```
