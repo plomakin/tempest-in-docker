@@ -12,7 +12,8 @@ RUN apt-get install -y libxml2-dev libxslt-dev lib32z1-dev; \
     apt-get install -y python2.7-dev python-dev libssl-dev; \
     apt-get install -y python-libxml2 libxslt1-dev libsasl2-dev; \
     apt-get install -y libsqlite3-dev libldap2-dev libffi-dev; \
-    pip install tox
+    pip install tox; \
+    pip install virtualenv
 
 # Setup Environment by Cloning tempest
 RUN git clone https://github.com/openstack/tempest.git
