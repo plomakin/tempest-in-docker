@@ -2,7 +2,9 @@ FROM centos:6
 MAINTAINER Petr Lomakin <plomakin@mirantis.com>
 
 # Install git, python and essential tools
-RUN yum -y install git wget tar
+RUN yum -y update; \
+    yum -y upgrade; \
+    yum -y install git wget tar
 
 # Setup Environment by Cloning tempest
 # installing tempest dependencies
